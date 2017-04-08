@@ -1,0 +1,63 @@
+.container() {
+  width: 320px;
+  margin: 0 auto;
+
+  @media (min-width: @screen-md) {
+    width: 768px;
+  }
+  @media (min-width: @screen-xl) {
+    width: 1150px;
+  }
+}
+// ===========Для резины=============
+.container-fluid() {
+  width: auto;
+
+  @media (min-width: @screen-md) {
+    width: 87%;
+    max-width: 1150px;
+    margin: 0 auto;
+  }
+}
+
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container-static {
+  width: @width;
+  .center-block;
+}
+
+.clearfix() {
+  &::after {
+  content: "";
+    
+  display: table;
+  clear: both;
+  }
+}
+
+.btn(@rad: @border-radius, @color) {  
+  background-color: @color;
+  background-image: linear-gradient(to top, fade(@color-main, 40%) 0%, fade(@white, 50%) 100%);
+  border-radius: @rad;
+  border: 2px solid @border-color;
+}
+
+.trust-us-gradient {  
+  background-color: #13c5c1;    
+  background-image: linear-gradient(to top right,rgb(5, 153, 214) 0%,rgb(33, 241, 171) 100%);   
+}
+
+
+// Примесь для шрифта
+
+.font(@fontName; @urlName: @fontName; @weight: normal; @style: normal) {
+  font-family: '@{fontName}';  
+  src: url('/fonts/@{urlName}.woff') format('woff');    
+    font-weight: @weight;
+    font-style: @style;
+}

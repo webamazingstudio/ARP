@@ -57,7 +57,7 @@ gulp.task('copy', function () {
     console.log('Копирование файлов')
     return gulp.src([
             dirs.source + '/image/**',            
-            dirs.source + '/fonts/**/*.{woff, woff2}',
+            dirs.source + '/fonts/**/*.{woff, woff2}',            
             dirs.source + '/*.html'
         ], {
             base: dirs.source

@@ -57,7 +57,7 @@ gulp.task('copy', function () {
     console.log('Копирование файлов')
     return gulp.src([
             dirs.source + '/image/**',            
-            dirs.source + '/fonts/**/*.{woff, woff2}',
+            dirs.source + '/fonts/**/*.{woff, woff2}',            
             dirs.source + '/*.html'
         ], {
             base: dirs.source
@@ -73,7 +73,7 @@ gulp.task('clean-icons-folder', function () {
 
 gulp.task('jshandler', function() {
     console.log('Обработка JS')
-    return gulp.src([dirs.source + '/blocks/**/*.js', dirs.node + '/jquery/dist/jquery.js', dirs.node + '/slick-carousel/slick/slick.js'])
+    return gulp.src([dirs.node + '/jquery/dist/jquery.js', dirs.node + '/slick-carousel/slick/slick.js', dirs.source + '/blocks/**/*.js'])
         .pipe(concat('script.min.js'))
         .pipe(plumber())
         .pipe(uglify())

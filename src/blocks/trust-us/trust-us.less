@@ -4,14 +4,144 @@
 
 
 .trust-us {
-    .trust-us-gradient;
+    position: relative;
+    padding-bottom: 75px;   
+    
+    &--gradient::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+       .trust-us-gradient;
+       z-index: -1; 
+    }  
+}
+
+.trust-us__wrap {
+    z-index: 3;
+}
+
+.trust-us__arrow {    
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    width: 790px;
+    height: 603px;
+    background-image: url(../image/header-arrow.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 786px 603px;
+    z-index: -1;       
 }
 
 .trust-us__subscribe {
+    float: right;
+    margin-top: 15px;
+    margin-right: 110px;
     padding: 2px 0 2px 11px;
     font-size: (@font-size--text + 1);
     font-family: @font-family;    
     font-weight: @font-weight--bold;
     color: @color-main;
     .btn(10px, @white);
+    cursor: pointer;
+    transition: all @transition-time linear;
+    &:hover {
+      .btn(10px, @color-main);
+      color: @white;  
+    }
+    
 }
+
+.trust-us__title {
+    margin: 0;
+    padding-right: 50px;
+    width: 61%;
+    font-size: @font-size--h1;
+    line-height: @line-height;
+    font-family: @font-family; 
+    text-shadow: 0 0 5px @white, 4px 3px 5px fade(@black, 75%);
+    clear: both;
+    box-sizing: border-box;    
+}
+
+.trust-us__big-head {
+    display: block;
+    font-size: @font-size--big;
+}
+
+.trust-us__text-right {
+    display: block;
+    text-align: right;
+}
+
+.trust-us__human {   
+    position: absolute;    
+    z-index: -1;
+    visibility: hidden;
+    &--1 {
+        bottom: -60px;       
+        left: 10px;               
+    }
+
+    &--2 {
+        bottom: 0px;
+        left: 220px;        
+    }
+
+    &--3 {
+        bottom: 220px;
+        left: 440px;        
+    }
+
+    &--4 {
+        bottom: 340px;
+        left: 590px;        
+    }
+}
+
+
+.trust-us__question {    
+    margin-bottom: 60px;
+    font-family: @font-family;
+    font-size: (@font-size--text + 1);
+    line-height: @line-height;
+    color: @color-second;
+    text-shadow:0 0 5px @white, 3px 2px 5px fade(@black, 75%);
+    &--align-right {
+        text-align: right;
+    }
+    &--align-center {
+        text-align: center;
+    }
+    &:last-of-type {
+        margin-bottom: 0px;
+    }
+}
+
+.trust-us__logo {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+.fadeIn {  
+  animation-name: fadeIn;
+}
+
+.animated {
+    animation-duration: 1s;
+}
+
+

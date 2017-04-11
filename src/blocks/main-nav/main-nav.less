@@ -1,5 +1,9 @@
 .main-nav {
-
+    position: fixed;
+    top: 100px;
+    left: 0;
+    width: 94px;
+    z-index: 300;
 }
 
 .main__list {
@@ -9,12 +13,35 @@
     justify-content: space-between;
 }
 
-.main-nav__item {
-
+.main-nav__item {    
+    list-style: none;
 }
 
 .main-nav__link {
     display: block;
+    width: 94px;
+    height: 90px;
+    font-size: 0;    
+    &--home {
+        .menu-home();
+    }
+    &--question {
+        .menu-question();
+    }
+    &--service {
+        background-image: url('../image/service.png');
+        background-repeat: no-repeat;
+        background-position: 0 0;
+    }
+    &--info {
+        .menu-info();
+    }
+    &--search {
+        .menu-search();
+    }
+    &--subscr {
+        .menu-check();
+    }
 }
 
 @media (min-width: @screen-md) {

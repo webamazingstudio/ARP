@@ -1,0 +1,43 @@
+.page-footer {
+    min-height: 500px;
+    background-image: url(../image/book-footer.png);
+    background-repeat: no-repeat;
+    background-position: 75% 100%;
+}
+.page-footer__wrap {
+    padding-left: 140px;
+}
+
+.page-footer__slider {
+    width: (640/900)*100%;
+}
+
+.page-footer__text {    
+    font-size: @font-size--h2 + 0.4;
+    font-weight: @font-weight--bold;    
+    color: @lapalma;
+    text-align: center;
+    text-shadow: 0 0 5px rgba(255, 255, 190, 0.75), 3px 2px 5px fade(@black, 75%);
+    &--blue {
+        color: lighten(spin(@color-second, -13), 35%)    
+    }
+}
+
+.page-footer__btn {
+    width: 295px;
+    margin-left: 140px;
+    padding: 10px;    
+    font-size: @font-size--text + 2;
+    font-weight: @font-weight--bold;
+    font-style: italic;
+    color: @white;
+    text-align: center;    
+    .btn(14px; @color-main);
+    border-color: @white;
+    cursor: pointer;
+    transition: all @transition-time linear; 
+    &:hover {
+        background-color: @white;
+        color: @color-main;
+    }
+}

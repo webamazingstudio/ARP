@@ -63,7 +63,17 @@ gulp.task('copy', function () {
             base: dirs.source
         })        
         .pipe(gulp.dest(dirs.build))    
+          
 });
+
+gulp.task('copy-animate', function() {
+    return gulp.src(dirs.source + '/_include/animate/*.css', {base: dirs.source+ '/_include/animate/'})
+        .pipe(gulp.dest(dirs.build + '/css'))
+})
+gulp.task('copy-wow', function() {
+    return gulp.src(dirs.source + '/_include/animate/*.js', {base: dirs.source + '/_include/animate/'})
+        .pipe(gulp.dest(dirs.build + '/js'))  
+})
 
 
 gulp.task('clean-icons-folder', function () {
@@ -140,7 +150,9 @@ gulp.task('serve', function () {
 gulp.task('build', function (fn) {
     run(
         'clean',
-        'copy',        
+        'copy',
+        'copy-animate',
+        'copy-wow',        
         'html',        
         'style',
         'images',

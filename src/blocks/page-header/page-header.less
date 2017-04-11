@@ -1,0 +1,14 @@
+.page-header {
+    position: relative;    
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #13c5c1;    
+        background-image: linear-gradient(to top right,rgb(5, 153, 214) 0%,rgb(33, 241, 171) 100%);
+        z-index: -1;
+    }    
+}

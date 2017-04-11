@@ -1,8 +1,62 @@
-// Для импорта в диспетчер подключений: @import './src/blocks/news/news.less';
-
 @import '../../less/variables.less';     // только для удобства обращения к переменным
 
 
 .news {
-  
+  padding-left: 140px;
 }
+
+.news__title {
+    font-size: @font-size--h1;
+    text-align: center;    
+}
+
+.news__wrap {
+    width: 100%;
+    min-height: 290px;
+    padding: 10px 0;
+    margin-right: auto;    
+    background-image: url(../image/sheets-news.png);
+    background-repeat: no-repeat;
+    background-position: 0 0; 
+    background-size: cover;   
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.news__inner-title {
+    margin: 0;
+    margin-top: 20px;
+    font-size: @font-size--text;
+    font-family: @font-family--bold;
+    color: @gray-dark;
+    text-align: center;
+    &--fs-up {
+        margin-top: 0;
+        margin-bottom: 10px;
+        font-size: @font-size--text + 0.5;
+    }
+}
+
+.news__block {
+    width: 80%;
+    padding-left: 100px;
+    padding-right: 30px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.news__date {
+    color: @gray-lighten;
+}
+
+.news__picture {
+    float: left;
+    margin-right: 10px;
+}
+
+.news__content {
+    margin: 0;
+    color: @black;
+}
+
+

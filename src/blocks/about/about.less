@@ -4,5 +4,80 @@
 
 
 .about {
-  
+    padding-left: 140px;
+}
+
+
+.about__title {
+    margin: 0;
+    font-size: @font-size--big + 2;
+    font-weight: @font-weight--semiBold;
+    line-height: @line-height;    
+    text-align: right;
+}
+
+.about__slider {    
+    background-color: fade(@slider-bg, 35%);            
+}
+
+.about__slide {
+    padding: 20px;
+    padding-left: 140px;    
+    padding-right: 40px;
+    &--maker {
+        background-image: url(../image/girls-about.png);
+        background-repeat: no-repeat;
+        background-position: 0 180px;
+    }
+    &--teach {
+        background-image: url(../image/shop.png);
+        background-repeat: no-repeat;
+        background-position: 0 180px;
+    }
+}
+
+.about__inner-title {
+    margin: 0;
+    margin-bottom: 15px;
+    font-size: @font-size--text + 1.4;
+    color:  @lapalma;
+    text-align: right;    
+}
+
+.about__desc {
+    font-size: @font-size--text;
+    font-weight: @font-weight--bold;
+    color: @gray-darken;
+    text-align: left;
+    &--big-text {
+        font-size: @font-size--text + 1.6;
+    }
+    &--big-grn-text {
+        font-size: @font-size--h1;
+        color: darken(@lapalma, 2%);
+        text-shadow: 1px 1px 2px @black;
+    }
+    &:nth-of-type(1) {
+        padding-left: 20px;
+    }
+    &:nth-of-type(2) {
+        padding-left: 50px;
+    }
+    &:nth-of-type(3) {
+        padding-left: 80px;
+    }
+    &:nth-of-type(4) {
+        padding-left: 110px;
+    }
+    &:nth-of-type(5) {
+        padding-left: 140px;
+    }
+}
+
+.about__check {
+    display: inline-block;
+    vertical-align: bottom;
+    width: 37px;
+    height: 42px;
+    .check();
 }

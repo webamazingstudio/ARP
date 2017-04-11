@@ -1,8 +1,135 @@
-// Для импорта в диспетчер подключений: @import './src/blocks/our-team/our-team.less';
-
 @import '../../less/variables.less';     // только для удобства обращения к переменным
 
 
 .our-team {
-  
+    padding-left: 140px;    
+    justify-content: space-around;
+}
+
+.our-team__title {
+    width: 100%;
+    margin: 0;
+    margin-top: 20px;
+    font-size: @font-size--h1;
+    text-align: center;
+}
+
+.our-team__name {
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: @font-size--text + 1.6;
+    text-align: center;
+    text-shadow: 0 0 5px fade(@black, 75%);
+}
+
+.our-team__list {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    
+    &::before {
+        z-index: -1;
+    }
+    &--admin::before {        
+        content: "";
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        width: 126px;
+        height: 138px;
+        .sheets();              
+    }    
+    &--liric::before {
+        content: "";
+        position: absolute;
+        top: 20px;
+        left: 60px;
+        width: 126px;
+        height: 138px;
+        .lamp(); 
+    }
+    &--tech::before {
+        content: "";
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        width: 144px;
+        height: 138px;
+        .engine(); 
+    }
+}
+
+.our-team__item {
+    position: relative;
+    padding-bottom: 50px;
+    transition: all @transition-time linear;
+    &:hover {
+        color:@white;
+    }
+    &--admin {
+        &:hover {            
+            background-image: url(../image/our-team-1.png);
+            background-position: 50% 0;
+            background-repeat: no-repeat;
+            
+        }  
+    }
+    &--liric {
+        &:hover {            
+            background-image: url(../image/our-team-2.png);
+            background-position: 50% 0;
+            background-repeat: no-repeat;
+            
+        }  
+    }
+    &--tech {
+        &:hover {            
+            background-image: url(../image/our-team-3.png);
+            background-position: 50% 0;
+            background-repeat: no-repeat;            
+        }  
+    } 
+}
+
+
+.our-team__talent {
+    margin-top: 0;
+    margin-bottom: 5px;
+    list-style: none;
+    font-size: @font-size--text - 0.2;
+    font-weight: @font-weight--bold;
+    color: @gray-darken;   
+}
+
+.our-team__check {
+    display: inline-block;
+    vertical-align: bottom;
+    width: 37px;
+    height: 36px;
+    .stitches-sprite(-15px; -664px);
+    background-size: auto 1200px;
+}
+
+.our-team__btn {
+    position: absolute;
+    left: 50%;    
+    bottom: 0;
+    display: inline-block;
+    vertical-align: top; 
+    width: 146px;
+    margin-left: -73px;
+    padding: 5px 0;
+    font-size: @font-size--text;
+    font-family: inherit;
+    font-weight: @font-weight--bold;
+    color: darken(@color-main, 10%);
+    text-align: center;
+    text-decoration: none;
+    .btn(7px; @white);
+    cursor: pointer;
+    transition: all @transition-time linear;
+    &:hover {
+        background-color: @color-main;
+        color: @white;
+    }
 }
